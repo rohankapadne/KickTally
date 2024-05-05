@@ -1,0 +1,34 @@
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .country-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .country-tile {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .country-tile:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .country-tile img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
