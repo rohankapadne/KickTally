@@ -3,12 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChooseCountryComponent } from './choose-country/choose-country.component';
+import { ChooseCountryComponent } from './team/components/choose-country/choose-country.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChooseCountryComponent
   ],
   imports: [
     BrowserModule,
