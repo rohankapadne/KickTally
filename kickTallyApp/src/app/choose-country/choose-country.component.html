@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Choose Your Country</h2>
+    <div class="country-tiles">
+      <div class="country-tile" *ngFor="let country of countries" (click)="selectCountry(country)">
+        <img [src]="country.flag" alt="Country Flag">
+        <p>{{ country.name }}</p>
+      </div>
+    </div>
+  </div>
+  
