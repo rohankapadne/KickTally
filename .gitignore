@@ -11,6 +11,14 @@
 npm-debug.log
 yarn-error.log
 
+# Ignore node_modules directories in both backend and frontend
+/backend/node_modules
+/kickTallyApp/node_modules
+
+# Ignore env
+/backend/.env
+/kickTallyApp/.env
+
 # IDEs and editors
 .idea/
 .project
