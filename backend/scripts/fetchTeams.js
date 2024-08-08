@@ -3,21 +3,36 @@
 [
     {
         "team_id":50,
-        "leagues":[2,39,45]
+        "competitions": {
+            "domestic_league":39,
+            "domestic_cup":45,
+            "uefa":2,
+        }
     },
     {
         "team_id":541,
-        "leagues":[2,107,143]
+         "competitions": {
+            "domestic_league":107,
+            "domestic_cup":143,
+            "uefa":2,
+        }
     },
     {
         "team_id":85,
-        "leagues":[2,61,66]
+         "competitions": {
+            "domestic_league":61,
+            "domestic_cup":66,
+            "uefa":2,
+        }
     },
     {
         "team_id":157,
-        "leagues":[2,78,81]
+         "competitions": {
+            "domestic_league":78,
+            "domestic_cup":81,
+            "uefa":2,
+        }
     }
-
 ]
 
 

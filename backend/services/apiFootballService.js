@@ -20,11 +20,15 @@ exports.getTeamStats = async (teams, season) => {
     const teamStats = {};
     teamStats.team_id = team.team_id;
     teamStats.stats = {};
-    for (const leagueId of team.leagues) {
-      const response = await getLeagueStats(team.team_id, leagueId, season);
-      teamStats.stats[leagueId] = response.data;
+    team.leagues = Object.keys(team.competitions);
+    for (const leagueKey of team.leagues) {
+      const response = await getLeagueStats(
+        team.team_id,
+        team.competitions[leagueKey],
+        season
+      );
+      teamStats.stats[leagueKey] = response.data;
     }
-    console.log(teamStats);
     results.push(teamStats);
   }
   return results;
