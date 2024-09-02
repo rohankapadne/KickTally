@@ -1,10 +1,47 @@
-<div class="container">
-    <h2>Choose Your Country</h2>
-    <div class="country-tiles">
-      <div class="country-tile" *ngFor="let country of countries" (click)="selectCountry(country)">
-        <img [src]="country.flag" alt="Country Flag">
-        <p>{{ country.name }}</p>
-      </div>
-    </div>
+<div class="team-table-container">
+  <table class="team-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Team</th>
+        <th>Total Played</th>
+        <th>Total Wins</th>
+        <th>Total Draws</th>
+        <th>Total Losses</th>
+        <th>Goal Difference</th>
+        <th>Domestic Cup Points</th>
+        <th>Domestic League Points</th>
+        <th>Champions League Points</th>
+        <th>Total Points</th>
+        <th>Normalized Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teams; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ team.player }}</td>
+        <td>{{ team.team }}</td>
+        <td>{{ team.totalPlayed }}</td>
+        <td>{{ team.totalWins }}</td>
+        <td>{{ team.totalDraws }}</td>
+        <td>{{ team.totalLosses }}</td>
+        <td>--</td> <!-- Goal Difference logic to be implemented -->
+        <td>{{ team.domesticCupPoints }}</td>
+        <td>{{ team.domesticLeaguePoints }}</td>
+        <td>{{ team.championsLeaguePoints }}</td>
+        <td>{{ team.totalPoints }}</td>
+        <td>{{ team.normalisedPoints }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Button and Timestamp Section -->
+  <div class="button-container">
+    <button (click)="loadTeamData()">Load Data</button>
+    <p *ngIf="lastFetchedTime" class="timestamp">Last Data Fetch: {{ lastFetchedTime }}</p>
   </div>
-  
+
+  <app-loader [isLoading]="isLoading"></app-loader>
+</div>
+<app-toaster [message]="toastMessage"></app-toaster>
