@@ -256,7 +256,6 @@ export class ChooseCountryComponent implements OnInit {
     const championsLeagueRatio = championsLeaguePlayed > 0 ? (championsLeaguePoints / championsLeaguePlayed) : 0;
     const domesticLeagueRatio = domesticLeaguePlayed > 0 ? (domesticLeaguePoints / domesticLeaguePlayed) : 0;
     const domesticCupRatio = domesticCupPlayed > 0 ? (domesticCupPoints / domesticCupPlayed) : 0;
-    // Example normalization logic with appropriate checks
     return ((championsLeagueRatio * 3) + (domesticLeagueRatio * 2) + domesticCupRatio);
   }
 
