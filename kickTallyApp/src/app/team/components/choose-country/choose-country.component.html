@@ -21,7 +21,9 @@
       <tr *ngFor="let team of teams; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{ team.player }}</td>
-        <td>{{ team.team }}</td>
+        <td class="team-logo">
+          <img [src]="team.team" alt="{{ team.team }}" />
+        </td>
         <td>{{ team.totalPlayed }}</td>
         <td>{{ team.totalWins }}</td>
         <td>{{ team.totalDraws }}</td>

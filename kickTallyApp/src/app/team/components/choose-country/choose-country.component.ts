@@ -21,7 +21,8 @@ export class ChooseCountryComponent implements OnInit {
     domesticLeague: 39,
     domesticCup: 45,
     championsLeague: 2,
-    teamId: 50
+    teamId: 50,
+    logo: "https://media.api-sports.io/football/teams/50.png"
   };
 
   realMadrid = {
@@ -29,7 +30,8 @@ export class ChooseCountryComponent implements OnInit {
     domesticLeague: 140,
     domesticCup: 143,
     championsLeague: 2,
-    teamId: 541
+    teamId: 541,
+    logo: "https://media.api-sports.io/football/teams/541.png"
   };
 
   bayernMunich = {
@@ -37,7 +39,8 @@ export class ChooseCountryComponent implements OnInit {
     domesticLeague: 78,
     domesticCup: 81,
     championsLeague: 2,
-    teamId: 157
+    teamId: 157,
+    logo: "https://media.api-sports.io/football/teams/157.png"
   };
 
   constructor(private _statsService: StatsServiceService) { }
@@ -50,7 +53,7 @@ export class ChooseCountryComponent implements OnInit {
     this.teams = [
       {
         player: "RSK",
-        team: this.manCity.teamName,
+        team: this.manCity.logo,
         domesticLeaguePoints: 0,
         domesticLeaguePlayed: 0,
         domesticLeagueWins: 0,
@@ -75,7 +78,7 @@ export class ChooseCountryComponent implements OnInit {
       },
       {
         player: "Rahul & Rutu",
-        team: this.realMadrid.teamName,
+        team: this.realMadrid.logo,
         domesticLeaguePoints: 0,
         domesticLeaguePlayed: 0,
         domesticLeagueWins: 0,
@@ -100,7 +103,7 @@ export class ChooseCountryComponent implements OnInit {
       },
       {
         player: "Avinash",
-        team: this.bayernMunich.teamName,
+        team: this.bayernMunich.logo,
         domesticLeaguePoints: 0,
         domesticLeaguePlayed: 0,
         domesticLeagueWins: 0,
